@@ -1,0 +1,6 @@
+@SchoolReinforcement_HostAddress = http://localhost:5151
+
+GET {{SchoolReinforcement_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
