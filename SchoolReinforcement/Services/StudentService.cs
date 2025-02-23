@@ -13,6 +13,11 @@ namespace SchoolReinforcement.Services
             _studentRepository = studentRepository;
         }
 
+        public List<Student> GetAll()
+        {
+          return _studentRepository.GetAll().Result;
+        }
+
         public Student GetById(int id)
         {
             return _studentRepository.GetById(id).Result;

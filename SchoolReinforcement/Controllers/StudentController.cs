@@ -22,5 +22,13 @@ namespace SchoolReinforcement.Controllers
             Student student = _service.GetById(id);
             return Ok(student);
         }
+
+        [HttpGet]
+        public ActionResult<List<Student>> Get()
+        {
+            List<Student> listStudent = _service.GetAll();
+
+            return Ok(listStudent);
+        }
     }
 }
