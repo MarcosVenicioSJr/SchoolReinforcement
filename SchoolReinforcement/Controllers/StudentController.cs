@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SchoolReinforcement.Entities;
+using SchoolReinforcement.Entities.Requests;
 using SchoolReinforcement.Interfaces.Service;
 
 namespace SchoolReinforcement.Controllers
@@ -29,6 +30,13 @@ namespace SchoolReinforcement.Controllers
             List<Student> listStudent = _service.GetAll();
 
             return Ok(listStudent);
+        }
+
+        [HttpPost]
+        public ActionResult Create([FromBody] CreateStudentRequest request)
+        {
+            _service.Create(request);
+            return Ok();
         }
     }
 }
