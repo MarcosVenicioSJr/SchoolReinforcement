@@ -2,9 +2,9 @@
 {
     public enum StudentSituation
     {
-        Active,
-        OnLeave,
-        Graduated,
-        DroppedOut
+        Active = 0,
+        OnLeave = 1,
+        Graduated = 2,
+        DroppedOut = 3
     }
 }
